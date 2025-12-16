@@ -1,0 +1,150 @@
+/* FULL WIDTH NAVBAR */
+.navbar {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+/* 3 COLUMN LAYOUT */
+.navbar-inner {
+  width: 100%;
+  padding: 20px 80px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+
+/* LEFT */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-logo-text{
+  color: black;
+  font-weight: 700;
+  font-size: 1.25rem;
+
+}
+
+/* CENTER */
+.navbar-center {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.navbar-center a {
+  text-decoration: none;
+  color: #475569;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.navbar-center a {
+  position: relative;
+  text-decoration: none;
+  color: #475569;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 6px 2px;
+  transition: color 0.3s ease;
+}
+
+/* underline animation */
+.navbar-center a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #4f46e5;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.navbar-center a:hover {
+  color: #4f46e5;
+}
+
+.navbar-center a:hover::after {
+  width: 100%;
+}
+
+/* RIGHT */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+/* LOGO */
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  background: #4f46e5;
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.btn-signin {
+  background: transparent;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #475569;
+  cursor: pointer;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.btn-signin:hover {
+  color: #0f172a;
+  transform: translateY(-1px);
+}
+
+
+.btn-getst {
+  background: #4f46e5;
+  color: #ffffff;
+  border: none;
+  padding: 8px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.25);
+  transition: all 0.3s ease;
+}
+
+.btn-getst:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(79, 70, 229, 0.35);
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .navbar-center {
+    display: none;
+  }
+
+  .btn-signin {
+    display: none;
+  }
+}
